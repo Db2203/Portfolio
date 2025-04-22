@@ -1,140 +1,57 @@
-import React,{useRef} from 'react'
-import emailjs from '@emailjs/browser';
+import React from 'react';
 import styled from 'styled-components';
 
 function ContactMe() {
-
-const form = useRef();
-
-const sendEmail = (e) => {
-  
-
-  emailjs.sendForm('service_l8gt0pa', 'template_2p6ob6f', form.current, '34uT-EcuAvUdIaDar')
-    .then((result) => {
-        console.log(result.text);
-    }, (error) => {
-        console.log(error.text);
-    });
-};
   return (
-  <ContactForm>
-    <h1>Contact Me</h1> 
-    <form ref={form} onSubmit={sendEmail}>
-    
-      <input className="name-input" placeholder='John Smith' type="text" name="user_name" />
-      <input placeholder='JSmith21@email.com' className="email-input" type="email" name="user_email" />
-      <textarea placeholder="Hey Nezam! I'd like to hire you" className="message-input" name="message" />
-      <input className="btn" type="submit" value="Send" />
-    </form>
-  </ContactForm>
-  )
+    <ContactForm>
+      <h1>Contact Me</h1>
+      <div className="contact-info">
+        <p>Email: <br /><a href="mailto:dhruvbajpai22@gmail.com?subject=Inquiry">dhruvbajpai22@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/Db2203" target="_blank" rel="noopener noreferrer">https://github.com/Db2203</a></p>
+      </div>
+    </ContactForm>
+  );
 }
 
 const ContactForm = styled.div`
-    
-    position:relative;
-    top:200px;
-    left:200px;
-    
-  h1{
-    font-size:3rem;
-    color:white;
-    position:relative;
-    top:55px;
-    left:-10px;
-
-    @media(max-width:700px){
-      left:-180px;
-      top:-140px;
-    }
-  }
-
-  input{
-    padding:0;
-    margin:0;
-  }
-
-  input.name-input{
-    height:10px;
-    position:relative;
-    top:85px;
-    width:300px;
-    @media(max-width:700px){
-      left:-180px;
-      top:-140px;
-      width:150px;
-    }
-  }
-
-  input.email-input{
-    height:10px;
-    position:relative;
-    top:85px;
-    left:-2px;
-    width:300px;
-    margin-left:2px;
-
-    @media(max-width:700px){
-      left:-185px;
-      top:-140px;
-      width:150px;
-    }
-  }
-
+  position: relative;
+  top: 200px;
+  left: 150%;
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto;
   
-input.btn{
-  position:relative;
-  height:50px;
-  width:600px;
-  top:80px;
-  left:0px;
-  background-color:black;
-  color:white;
-  font-size:30px;
-
-  @media(max-width:700px){
-    top:-145px;
-    left:-180px;
-    width:300px;
+  h1 {
+    font-size: 3rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
   }
-}
 
-  textarea.message-input{
-    height:100px;
-    width:600px;
-    position:relative;
-    top:85px;
+  .contact-info {
+    font-size: 1.4rem;
+    color: #fff;
+    text-align: center;
 
-    @media(max-width:700px){
-      left:-180px;
-      top:-140px;
-      width:300px;
+    a {
+      color:rgb(255, 255, 255);
+      text-decoration: none;
+      font-weight: bold,italic;
+      &:hover {
+        text-decoration: underline;
+      }
     }
-    
-  }
 
-  
-
-  input:placeholder{
-    padding:0;
-  }
-
-  input::placeholder{
-    font: 1.7em sans-serif;
-    line-height:12;
-
-    @media(max-width:700px){
-      font:0.9em sans-serif;
+    p {
+      margin-bottom: 15px;
     }
   }
 
-  textarea::placeholder{
-    font: 30px sans-serif;
-
-    @media(max-width:700px){
-      font:20px sans-serif;
+  @media(max-width: 700px) {
+    .contact-info {
+      font-size: 1rem;
     }
   }
 `;
 
-export default ContactMe
+export default ContactMe;

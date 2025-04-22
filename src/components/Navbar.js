@@ -1,11 +1,10 @@
 import React from "react";
 import styled from 'styled-components'
-import {Link,NavLink} from 'react-router-dom';
+import {Link, NavLink} from 'react-router-dom';
 import Logo from "../assets/images/logo.png"
-import {faHome,faUser,faEnvelope,faFolderOpen} from "@fortawesome/free-solid-svg-icons"
+import {faHome, faUser, faEnvelope, faFolderOpen} from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faLinkedin,faGithub} from '@fortawesome/free-brands-svg-icons'
-
+import {faGithub} from '@fortawesome/free-brands-svg-icons'
 
 function Navbar() {
 
@@ -14,7 +13,7 @@ function Navbar() {
         <Link>
             <img src={Logo} alt="logo" />
         </Link>
-        <p>Nezam Seraj</p>
+        <p>Dhruv Bajpai</p>
         <nav>
         <NavLink exact="true" activeclassname="active" to="/">
             <FontAwesomeIcon icon={faHome} color="white" />
@@ -32,17 +31,9 @@ function Navbar() {
         <ul>
             <li>
                 <a 
-                    href="https://www.linkedin.com/in/nezam-seraj-b317b2240/" 
+                    href="https://github.com/Db2203" 
                     target="_blank" 
-                    rel="noreferrel">
-                    <FontAwesomeIcon icon={faLinkedin} color='white' />
-                </a>
-            </li>
-            <li>
-                <a 
-                    href="https://github.com/NSeraj11?tab=repositories" 
-                    target="_blank" 
-                    rel="noreferrel">
+                    rel="noopener noreferrer">
                     <FontAwesomeIcon icon={faGithub} color='white' />
                 </a>
             </li>
@@ -59,15 +50,16 @@ const Nav = styled.div`
     img{
         width:10rem;
         position:relative;
-        left:0px;
+        top:-10px;
+        left:-2px;
     }
 
     p{
         color:white;
         font-size:20px;
         position:relative;
-        top:0px;
-        left:30px;
+        top:-10px;
+        left:20px;
     }
     nav{
         display:block;

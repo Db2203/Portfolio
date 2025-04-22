@@ -1,53 +1,84 @@
-import React from 'react'
+import React from 'react';
 import styled from 'styled-components';
-import LogoCube from '../components/Cube/Cube';
+import ProfileImage from '../assets/images/Aboutme.jpg'; // Path to your image
 
 function About() {
   return (
     <MainContainer>
-        <TextContainer>
-            <h1>About Me</h1>
-            <br />
-            <p>I'm an aspiring front end developer hoping to find a job with a respectable company where I can continue to grow while also helping the company grow over time.  I am familiar with many facets of web development and am constantly working to expand my knowledge on a daily basis. I have also found that I have a passion for designing websites as well as developing them. The creative process involved in planning and then bringing that site to life is the part of being a web developer that I really enjoy</p>
-            <br />
-            <p>When I'm not devloping, I enjoy time with family, friends, and my dog Trunks.  I also enjoy sports, both watching and playing. A goal for the future for me is to find a space where sports and web development intersect with the hopes of finding a career in that space. </p>        
-        </TextContainer>
-        <LogoCube />      
+      <TextContainer>
+        <h1>About Me</h1>
+        <br />
+        <p>
+          Hi! I'm Dhruv Bajpai, a Computer Science and Engineering student at Manipal University with a passion for coding and problem-solving. I enjoy staying active through badminton, basketball, and chess, and I’m also an avid gamer. When it comes to tech, I’m always driven to tackle challenges and find creative solutions, whether it’s debugging code or strategizing in a game.
+        </p>
+        <br />
+        <p>
+          In my free time, I love to travel and explore new places, cultures, and ideas. I believe in constantly learning and growing—whether through personal hobbies or professional development. I’m excited about applying what I learn and solving problems in both the tech world and everyday life.
+        </p>
+      </TextContainer>
+      
+      <ImageContainer>
+        <ProfileImageStyled src={ProfileImage} alt="Dhruv Bajpai" />
+      </ImageContainer>
     </MainContainer>
-  )
+  );
 }
 
 const MainContainer = styled.div`
-    display:flex;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
 `;
 
 const TextContainer = styled.div`
-    position:relative;
-    top:300px;
-    font-size:20px;
-    left:100px;
-    width:40rem;
+  position: relative;
+  top: 100px;
+  font-size: 20px;
+  width: 40rem;
 
+  h1 {
+    color: white;
+  }
 
-    h1{
-        color:white;
+  p {
+    margin-top: 20px;
+  }
 
-        @media(max-width:700px){
-            position:relative;
-            top:-250px;
-        }
-    }
-
-    p{
-        @media(max-width:700px){
-            position:relative;
-            top:-250px;
-            width:25%;
-            height:100vh;
-            font-size:15px;
-        }
-    }
-
+  @media(max-width: 700px) {
+    position: relative;
+    top: 0;
+    font-size: 15px;
+    width: 100%;
+    padding: 10px;
+  }
 `;
 
-export default About
+const ImageContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 100px;
+
+  /* Adjust the positioning here */
+  /* Move image down by 50px */
+  margin-top: 50px;
+
+  /* Move image to the right by 50px */
+  margin-left: 50px;
+`;
+
+const ProfileImageStyled = styled.img`
+  width: 100%; /* Makes the image responsive */
+  height: auto;
+  max-width: 500px; /* Adjust max-width as per your needs */
+  object-fit: contain; /* Ensures the full image appears without cropping */
+
+  /* You can also add more positioning if needed */
+  /* Adjust image position further */
+  position: relative;
+  top: -100px;  /* Move the image down */
+  left: 20px; /* Move the image to the right */
+`;
+
+export default About;

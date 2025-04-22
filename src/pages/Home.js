@@ -1,20 +1,19 @@
 import React from 'react'
 import styled from 'styled-components';
-import Logo from '../assets/images/Cartoonify.png'
+import Logo from '../assets/images/Db.png'
 
 function Home() {
   return (
     <Container>
-        <h1>Hi! I'm Nezam!</h1>
-        <h2>Developer / Designer</h2>
-        <img src={Logo} />
+        <h1>Hello! I'm Dhruv!</h1>
+        <h2>Tech Enthusiast | Problem Solver</h2>
+        <img src={Logo} alt="Dhruv's Avatar" />
     </Container>
   )
 }
 
 const Container = styled.div`
     h1{
-
         position:relative;
         top:400px;
         left:150px;
@@ -37,16 +36,19 @@ const Container = styled.div`
     }
 
     img{
-        position:relative;
-        left:400px;
+        position: absolute;  /* Position the image absolutely */
+        top: 200px;          /* Moves the image 100px down from the top */
+        left: 620px;          /* Moves the image 50px from the left */
+        width: 400px;        /* Adjust width */
+        height: 400px;       /* Adjust height */
+        object-fit: cover;  /* Ensures the image fits proportionally without distortion */
 
         @media(max-width:700px){
             left:50px;
-            height:250px;
-            width:250px;
+            height: 250px;  /* Adjust image height for mobile */
+            width: 250px;   /* Adjust image width for mobile */
             top:100px;
         }
-
     }
 `;
 
