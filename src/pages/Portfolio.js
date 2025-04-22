@@ -47,7 +47,7 @@ Tech Used: Python, Streamlit, spaCy, PDFPlumber, ReportLab"
               description="A customized portfolio website showcasing my skills, projects, and achievements. Built with React, styled-components, and HTML/CSS, the website provides an interactive and visually appealing user experience. It serves as a personal branding tool and demonstrates my web development abilities.
 
 Technologies Used: React, styled-components, HTML/CSS"
-              githubLink="https://github.com/Db2203/my_portfolio"
+              githubLink="https://github.com/Db2203/Portfolio"
             />
           </div>
         </Box>
