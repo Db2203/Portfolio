@@ -1,6 +1,7 @@
 {
-  "name": "final_portfolio",
+  "name": "my_portfolio",
   "version": "0.1.0",
+  "homepage": "https://github.com/Db2203/my_portfolio",
   "private": false,
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
