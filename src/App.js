@@ -1,4 +1,4 @@
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';  // Use HashRouter for GitHub Pages
 import Navbar from './components/Navbar';
 import Pages from './pages/Pages';
 import styled from 'styled-components';
@@ -6,17 +6,17 @@ import styled from 'styled-components';
 function App() {
   return (
     <Main className="App">
-    <BrowserRouter>
+      <Router>  {/* Changed BrowserRouter to HashRouter */}
         <Navbar />
         <Pages />
-    </BrowserRouter>
+      </Router>
     </Main>
   );
 }
 
 const Main = styled.div`
-  display:flex;
-  overflow:hidden;
+  display: flex;
+  overflow: hidden;
 `;
 
 export default App;
